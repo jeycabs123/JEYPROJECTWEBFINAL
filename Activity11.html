@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Activity 11 - JS Loops</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #141e30, #243b55);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .container {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .box {
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(10px);
+        border-radius: 16px;
+        padding: 20px;
+        width: 280px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+        transition: transform 0.3s ease;
+    }
+
+    .box:hover {
+        transform: translateY(-5px);
+    }
+
+    h3 {
+        margin-top: 0;
+        text-align: center;
+        color: #00d4ff;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    input {
+        width: 100%;
+        padding: 8px;
+        margin: 5px 0 10px 0;
+        border: none;
+        border-radius: 6px;
+        outline: none;
+    }
+
+    button {
+        width: 48%;
+        padding: 8px;
+        margin-top: 5px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        opacity: 0.8;
+        transform: scale(1.03);
+    }
+
+    .clear {
+        background: #ff4d4d;
+        color: white;
+    }
+
+    .box button:not(.clear) {
+        background: #00c6ff;
+        color: white;
+    }
+
+    .result {
+        margin-top: 12px;
+        padding: 10px;
+        min-height: 40px;
+        background: rgba(0,0,0,0.2);
+        border-radius: 8px;
+        font-size: 14px;
+        white-space: pre-line;
+    }
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="box">
+        <h3>For Loop</h3>
+        <label>Enter number:</label>
+        <input type="number" id="forNum">
+
+        <label>Enter text:</label>
+        <input type="text" id="forText">
+
+        <button onclick="runFor()">Show</button>
+        <button class="clear" onclick="clearLoop('for')">Clear</button>
+
+        <div id="forResult" class="result"></div>
+    </div>
+
+    <div class="box">
+        <h3>While Loop</h3>
+        <label>Enter number:</label>
+        <input type="number" id="whileNum">
+
+        <label>Enter text:</label>
+        <input type="text" id="whileText">
+
+        <button onclick="runWhile()">Show</button>
+        <button class="clear" onclick="clearLoop('while')">Clear</button>
+
+        <div id="whileResult" class="result"></div>
+    </div>
+
+    <div class="box">
+        <h3>Do-While Loop</h3>
+        <label>Enter number:</label>
+        <input type="number" id="doNum">
+
+        <label>Enter text:</label>
+        <input type="text" id="doText">
+
+        <button onclick="runDoWhile()">Show</button>
+        <button class="clear" onclick="clearLoop('do')">Clear</button>
+
+        <div id="doResult" class="result"></div>
+    </div>
+
+</div>
+
+</body>
+</html>
